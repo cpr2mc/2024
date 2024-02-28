@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Grading</h1>
+        <p>{{ message }}</p>
+        <form v-on:submit.prevent="checkGrade">
+            <label for="percentage-grade">Please enter the percentage: </label>
+            <input v-model="percentageGrade" type="number" id="percentage-grade">
+            <button type="submit">Submit Grade</button>
+        </form>
+        <p>{{ output }}</p>
+    </div>
+
+</body>
+</html>
