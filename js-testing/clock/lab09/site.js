@@ -1,23 +1,6 @@
 // JS Clock
 
-let date = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+let date = new Date(2024, 3, 1, 9, 31, 30, 0);
 console.log(date);
 
-// reference the below!!!!
-// <!DOCTYPE html>
-// <html>
-// <body>
-
-// <h2>JavaScript new Date()</h2>
-
-// <p>new Date(7 numbers) creates a date object with the specified date and time:</p>
-
-// <p id="demo"></p>
-
-// <script>
-// const d = new Date(2018, 11, 24, 10, 33, 30, 0);
-// document.getElementById("demo").innerHTML = d;
-// </script>
-
-// </body>
-// </html>
+document.getElementById("Clock").innerHTML = date;
