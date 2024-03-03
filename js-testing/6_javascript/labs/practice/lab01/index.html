@@ -1,0 +1,42 @@
+<!-- Re-iterating lab01 from PDX Code Guild -->
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter!</title>
+    <!-- you can put Javascript right in the HTML fields in a script tag -->
+    <!-- <script>
+        alert('Hello, world!')
+    </script> -->
+    
+    <!-- or you can use a script tag to link to an external JS file. -->
+</head>
+<body>
+    <input type="text" name="input_value" placeholder="Input Value Placeholder" id="input_value">
+    <label for="input_value">Choose an input unit:</label>
+    <select name="input_units" id="input_units">
+        <option value="feet">feet</option>
+        <option value="miles">miles</option>
+        <option value="meters">meters</option>
+        <option value="kilometers">kilometers</option>
+        <option value="yards">yards</option>
+        <option value="inches">inches</option>
+    </select>
+    <label for="output_value">Choose an output unit:</label>
+    <select name="output_units" id="output_units">
+        <option value="feet">feet</option>
+        <option value="miles">miles</option>
+        <option value="meters">meters</option>
+        <option value="kilometers">kilometers</option>
+        <option value="yards">yards</option>
+        <option value="inches">inches</option>
+    </select>
+    <button type="submit" id="convertButton">Convert!</button>
+    
+    <h1 id="result"></h1>
+<script src="script.js"></script>
+</body>
+</html>
