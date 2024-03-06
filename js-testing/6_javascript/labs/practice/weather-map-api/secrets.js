@@ -1,3 +1,3 @@
 // OpenWeatherMap API Key
 
-const secretAPIKey = 'test1';
+const secretAPIKey = 'test2';
