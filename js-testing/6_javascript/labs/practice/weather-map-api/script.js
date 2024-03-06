@@ -1,6 +1,6 @@
 // Weather Map API
 
-const x = document.getElementById('#demo');
+const x = document.getElementById('demo');
     
 function getLocation() {
     if (navigator.geolocation) {
@@ -14,7 +14,3 @@ function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
     console.log('showPosition ran.')
 }
-
-// form.addEventListener('submit') {
-//     console.log('button pressed.');
-// }
