@@ -13,11 +13,22 @@ function getLocation() {
     }
 }
 
+function checkResponse(response) {
+    if (!response.ok) {
+        console.error('Weather API call failed:', response.status, response.statusText);
+        return;
+    }
+}
+
 async function logWeather(lat, long, apiKey) {
     console.log('making weather api call...');
-    const weather = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}`);
-    console.log('complete.');
-    console.log(weather);
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`
+    console.log(url)
+    const response = await fetch(url);
+    checkResponse(response);
+    const weatherData = await response.json();
+    console.log('Weather data:', weatherData);
+    // need to figure out how to display JSON next
 }
 
 function showPosition(position) {
