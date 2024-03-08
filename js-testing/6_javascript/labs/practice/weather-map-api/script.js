@@ -14,7 +14,7 @@ function getLocation() {
 
 async function logWeather(lat, long, apiKey) {
     console.log('making weather api call...');
-    const weather = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}`);
+    const weather = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude={}&appid=${apiKey}`);
     console.log('complete.');
     console.log(weather);
 }
@@ -22,9 +22,11 @@ async function logWeather(lat, long, apiKey) {
 function showPosition(position) {
     console.log(position)
     x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
-    userLatitude = position.coords.latitude;
-    userLongitude = position.coords.longitude;
-    logWeather(userLatitude, userLongitude, secretApiKey);
+    userLatitude = Math.floor(position.coords.latitude * 100) / 100;
+    userLongitude = Math.floor(position.coords.longitude * 100) / 100;
+    console.log(userLatitude, userLongitude)
+    console.log(logWeather(userLatitude, userLongitude, secretApiKey));
+
 }
 
 displayButton.onclick = getLocation;
