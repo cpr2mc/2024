@@ -20,3 +20,4 @@ currencies.forEach((currency) => {
     option.text = currency;
     toDropDown.add(option);
 });
+

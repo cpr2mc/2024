@@ -43,4 +43,33 @@ input#amount {
     display: block;
     width: 100%;
     border-bottom: 2px solid #02002c;
+    color: #7a789d;
+    margin-bottom: 2em;
+    padding: 0.5em;
 }
+input#amount:focus {
+    color: #9873fe;
+    border-color: #9873fe;
+}
+.dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+select {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    border-radius: 0.2em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("images/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 20px 20px;
+    background-color: #9873fe;
+    color: #fff;
+}
+
