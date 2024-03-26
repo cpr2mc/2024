@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Nav = () => {
+  const isUserLoggedIn = true;
+  
   return (
     <nav>
       <nav className="flex-between w-full mb-16 pt-3">
@@ -21,6 +23,23 @@ const Nav = () => {
             Promptopia
           </p>
         </Link>
+        
+        {/* mobile navigation */}
+        <div className="sm:flex hidden">
+          {isUserLoggedIn ? (
+             <div className="flex gap-3 md:gap-5">
+              <Link href="/create-prompt"
+              className="black_btn">
+                Create Post
+              </Link>
+             </div>
+          ): (
+            <>
+            
+            </>
+          )}
+        </div>  
+
       </nav>
     </nav>
   )
